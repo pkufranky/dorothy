@@ -27,7 +27,9 @@ toto = Toto::Server.new do
   # set :ext,       'txt'                                     # file extension for articles
   # set :cache,      28800                                    # cache duration, in seconds
 
+  set :author, 'pkufranky'
   set :date, lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
+  set :ext, 'md'
 end
 
 run toto
